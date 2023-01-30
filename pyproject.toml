@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "airg"
+version = "0.1.0"
+description = "Test for airG"
+authors = ["Hugo Brilhante <hugobrilhante@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.28.2"
+coverage = "^7.1.0"
+pre-commit = "^3.0.1"
+requests-mock = "^1.10.0"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = 'True'
+force_grid_wrap = 0
+use_parentheses = 'True'
+ensure_newline_before_comments = 'True'
+line_length = 120
+
+[tool.pylint.format]
+max-line-length = "120"
+
+[tool.pylint.messages_control]
+disable = [
+    "missing-timeout",
+    "missing-function-docstring",
+    "missing-module-docstring",
+    "missing-class-docstring",
+    "subprocess-run-check"
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

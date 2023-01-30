@@ -1,0 +1,4 @@
+requests
+coverage
+pre-commit
+requests-mock
